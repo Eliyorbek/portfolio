@@ -25,22 +25,12 @@
 
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="/back/assets/vendor/fonts/boxicons.css" />
-
-    <!-- Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/back/assets/vendor/css/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" href="/back/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
     <link rel="stylesheet" href="/back/assets/css/demo.css" />
-
-    <!-- Vendors CSS -->
     <link rel="stylesheet" href="/back/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
-
-    <!-- Page CSS -->
-
-    <!-- Helpers -->
     <script src="/back/assets/vendor/js/helpers.js"></script>
-
-    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
-    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="/back/assets/js/config.js"></script>
 </head>
 

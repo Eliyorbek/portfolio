@@ -11,4 +11,6 @@ return [
     'freelancer'=>'Freelancer',
     'php'=>'PHP Devoloper',
     'backend'=>'Backend Developer',
+    'language'=>'Language',
+    'search'=>'Search...',
     ];

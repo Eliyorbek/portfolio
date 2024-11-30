@@ -25,8 +25,6 @@ class AppServiceProvider extends ServiceProvider
 
         if (!is_null($locale)) {
             App::setLocale($locale);
-
-            Pluralizer::useLanguage($locale);
         }
     }
 }
