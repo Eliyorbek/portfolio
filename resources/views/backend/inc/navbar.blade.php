@@ -25,14 +25,14 @@ use Illuminate\Support\Facades\Auth;
             </div>
         </div>
         <!-- /Search -->
-        <div class="dropdown show " >
-            <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                {{__('words.language')}}
+        <div class="dropdown">
+            <a class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                {{session('locale')}}
             </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="/language/uz">Uz</a>
-                <a class="dropdown-item" href="/language/en">En</a>
-            </div>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="/language/uz">Uz</a></li>
+                <li><a class="dropdown-item" href="/language/en">En</a></li>
+            </ul>
         </div>
         <ul class="navbar-nav flex-row align-items-center ms-auto">
             <li class="nav-item navbar-dropdown dropdown-user dropdown">

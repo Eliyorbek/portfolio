@@ -25,24 +25,28 @@
 
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="/back/assets/vendor/fonts/boxicons.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="/back/assets/vendor/css/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" href="/back/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
     <link rel="stylesheet" href="/back/assets/css/demo.css" />
     <link rel="stylesheet" href="/back/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
     <script src="/back/assets/vendor/js/helpers.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="/back/assets/js/config.js"></script>
+    @livewireStyles
 </head>
 
 <body>
-<!-- Layout wrapper -->
+@php
+\Illuminate\Support\Facades\App::setLocale(session('locale'));
+ @endphp
 <div class="layout-wrapper layout-content-navbar">
     <div class="layout-container">
         <!-- Menu -->
 
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
             <div class="app-brand demo">
-                <a href="index.html" class="app-brand-link">
+                <a href="{{route('admin')}}" class="app-brand-link">
               <span class="app-brand-logo demo">
                <img src="/elto.png" style="width: 200px;" alt="">
               </span>

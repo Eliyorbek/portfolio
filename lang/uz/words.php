@@ -13,4 +13,13 @@ return [
     'backend'=>'Backend Dasturchi',
     'language'=>'Til',
     'search'=>'Qidiruv...',
+    'add'=>'Qo\'shish',
+    'close'=>'Chiqish',
+    'save'=>'Saqlash',
+    'name'=>'Nomi',
+    'title'=>'Sarlavha',
+    'delete'=>'O\'chirish',
+    'deleted'=>'Ma\'lumotni o\'chirishni istaysizmi?',
+    'yes'=>'Ha',
+    'no'=>'Yo\'q',
 ];

@@ -29,14 +29,14 @@ use Illuminate\Support\Facades\Session;
 <div class="layout-overlay layout-menu-toggle"></div>
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 <script src="/back/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="/back/assets/vendor/js/menu.js"></script>
 <script src="../assets/js/main.js"></script>
 <script async defer src="https://buttons.github.io/buttons.js"></script>
-
+@livewireScripts
 @if(Session::has('loginSuccess'))
     <script>
         Swal.fire({
@@ -44,7 +44,7 @@ use Illuminate\Support\Facades\Session;
             icon: "success",
             title: "Tizimga muvofaqiyatli kirdingiz",
             showConfirmButton: false,
-            timer: 1500
+            timer: 2000
         });
     </script>
 @endif
@@ -55,7 +55,40 @@ use Illuminate\Support\Facades\Session;
             icon: "error",
             title: "Tizimga kirishda hatolik yuz berdi",
             showConfirmButton: false,
-            timer: 1500
+            timer: 2000
+        });
+    </script>
+@endif
+@if(Session::has('error'))
+    <script>
+        Swal.fire({
+            position: "bottom-end",
+            icon: "error",
+            title: 'Xatolik yuz berdi',
+            showConfirmButton: false,
+            timer: 2000
+        });
+    </script>
+    @endif
+@if(Session::has('delete'))
+    <script>
+        Swal.fire({
+            position: "bottom-end",
+            icon: "error",
+            title: 'Ma\'lumot o\'chirildi',
+            showConfirmButton: false,
+            timer: 2000
+        });
+    </script>
+@endif
+@if(Session::has('success'))
+    <script>
+        Swal.fire({
+            position: "bottom-end",
+            icon: "success",
+            title: 'Ma\'lumot qo\'shildi',
+            showConfirmButton: false,
+            timer: 2000
         });
     </script>
     @endif
