@@ -16,6 +16,10 @@ class IndexController extends Controller
         }
         App::setLocale(Session::get('locale'));
         $abouts = About::all();
-        return view('front.index' , compact('abouts'));
+        $asc = floor($abouts->count() / 2);
+        $desc = $abouts->count() - $asc;
+        $about1 = About::orderBy('id', 'desc')->limit($desc)->get();
+        $about2 = About::limit($asc)->get();
+        return view('front.index' , compact('about1','about2'));
     }
 }

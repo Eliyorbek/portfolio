@@ -11,25 +11,14 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button"data-bs-dismiss="modal" aria-label="Close" class="btn btn-danger">{{__('words.no')}}</button>
-                    <a href="/about/{{$id}}" class="btn btn-success" id="deleteBtn" >{{__('words.yes')}}</a>
+                    <form action="{{$url}}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-success deleteBtn"  >{{__('words.yes')}}</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-    <script>
-        $('#deleteBtn').on('click' , function(e){
-            let id = {{$id}};
-            let myUrl = this.attr('href')
-            alert(myUrl)
-            e.preventDefault()
-            $.ajax({
-                url:myUrl,
-                type:'POST',
-                data:id,
-                success:function(data){
 
-                },
-            })
-        })
-    </script>
 </div>

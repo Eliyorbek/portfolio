@@ -33,9 +33,9 @@
             </ul>
         </nav>
         <div class="language mt-5">
-            <div class="row">
-                <div class="col-lg-6"><a style="cursor: pointer;" href="/language/uz"><img src="/uzb.png" style="width: 100px;" alt=""></a></div>
-                <div class="col-lg-6"><a style="cursor: pointer;" href="/language/en"><img src="/usa.png" style="width: 100px;" alt=""></a></div>
+            <div class="row d-flex">
+                <div class="col-md-6"><a style="cursor: pointer;" href="/language/uz"><img src="/uzb.png" style="width: 100px;" alt=""></a></div>
+                <div class="col-md-6"><a style="cursor: pointer;" href="/language/en"><img src="/usa.png" style="width: 100px;" alt=""></a></div>
             </div>
         </div>
     </header>

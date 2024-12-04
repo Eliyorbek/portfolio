@@ -22,4 +22,9 @@ return [
     'deleted'=>'Ma\'lumotni o\'chirishni istaysizmi?',
     'yes'=>'Ha',
     'no'=>'Yo\'q',
+    'update'=>'Tahrirlash',
+    'skills'=>"Ko'nikmalar",
+    'languages'=>"Tillar",
+    'category'=>'Kategoriyalar',
+
 ];

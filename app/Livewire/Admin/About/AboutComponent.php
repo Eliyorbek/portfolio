@@ -17,12 +17,21 @@ class AboutComponent extends MyComponent
         2=>'title',
         3=>'action',
     ];
-    public $id;
+    public $id , $name_uz , $name_en, $subtitle,$url;
     public function deleteWindow($id){
         $this->id = $id;
+        $this->url = '/about/'.$this->id;
         $this->deleteOpen();
     }
 
+    public function updateWindow($id){
+        $this->id = $id;
+        $about = About::find($id);
+        $this->name_uz = $about->name['uz'];
+        $this->name_en = $about->name['en'];
+        $this->subtitle = $about->title;
+        $this->updateOpen();
+    }
     public function delete($id){
         dd($id);
     }

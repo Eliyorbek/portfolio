@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed layout-compact " dir="ltr" data-theme="theme-default" data-assets-path="/back/assets/" data-template="vertical-menu-template" data-style="dark">
+<html style="z-index:1 !important;" lang="en" class="light-style layout-navbar-fixed layout-menu-fixed layout-compact " dir="ltr" data-theme="theme-default" data-assets-path="/back/assets/" data-template="vertical-menu-template" data-style="dark">
 <head>
     <meta charset="utf-8" />
     <meta
@@ -30,13 +30,14 @@
     <link rel="stylesheet" href="/back/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
     <link rel="stylesheet" href="/back/assets/css/demo.css" />
     <link rel="stylesheet" href="/back/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="/my.css">
     <script src="/back/assets/vendor/js/helpers.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="/back/assets/js/config.js"></script>
     @livewireStyles
 </head>
 
-<body>
+<body >
 @php
 \Illuminate\Support\Facades\App::setLocale(session('locale'));
  @endphp
@@ -44,7 +45,7 @@
     <div class="layout-container">
         <!-- Menu -->
 
-        <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+        <aside style="z-index:1 !important;" id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
             <div class="app-brand demo">
                 <a href="{{route('admin')}}" class="app-brand-link">
               <span class="app-brand-logo demo">

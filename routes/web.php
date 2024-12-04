@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\AboutController;
+use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Front\IndexController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\App;
@@ -22,11 +23,21 @@ Route::middleware([\App\Http\Middleware\AdminMiddleware::class])->group(function
         return view('backend.index');
     })->name('admin');
 
-    Route::controller(AboutController::class)->group(function () {
+    Route::controller(Aboudeletetroller::class)->group(function () {
         Route::get('/about', 'index')->name('about.index');
         Route::post('/about', 'store')->name('about.store');
-        Route::get('/about/{id}', 'destroy')->name('about.delete');
+        Route::delete('/about/{id}', 'destroy')->name('about.delete');
+        Route::put('/about/{id}', 'update')->name('about.update');
     });
+
+    Route::controller(CategoryController::class)->group(function () {
+        Route::get('/category', 'index')->name('category.index');
+        Route::post('/category', 'store')->name('category.store');
+        Route::delete('/category/{id}', 'destroy')->name('category.delete');
+        Route::put('/category/{id}', 'update')->name('category.update');
+    });
+
+
 });
 
 Route::middleware('auth')->group(function () {

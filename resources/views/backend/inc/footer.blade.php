@@ -59,6 +59,17 @@ use Illuminate\Support\Facades\Session;
         });
     </script>
 @endif
+@if(Session::has('update'))
+    <script>
+        Swal.fire({
+            position: "bottom-end",
+            icon: "info",
+            title: "Ma'lumot yangilandi!",
+            showConfirmButton: false,
+            timer: 2000
+        });
+    </script>
+@endif
 @if(Session::has('error'))
     <script>
         Swal.fire({

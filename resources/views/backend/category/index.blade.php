@@ -1,4 +1,4 @@
 @extends('backend.inc.app')
 @section('content')
-    @livewire('admin.about.about-component')
+    @livewire('admin.kategory.category-component')
 @endsection

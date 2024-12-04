@@ -22,4 +22,8 @@ return [
     'deleted'=>'Do you want to delete the information?',
     'yes'=>'Yes',
     'no'=>'No',
+    'update'=>'Update',
+    'skills'=>"Skills",
+    'languages'=>"Languages",
+    'category'=>'Categories',
     ];

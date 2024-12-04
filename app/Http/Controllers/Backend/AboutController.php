@@ -72,7 +72,21 @@ class AboutController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+            $request->validate([
+                'name_uz'=>'required',
+                'name_en'=>'required',
+                'title'=>'required',
+            ]);
+            $name = [
+                'uz'=>$request->name_uz,
+                'en'=>$request->name_en
+            ];
+            About::find($id)->update([
+                'name'=>$name,
+                'title'=>$request->title,
+
+            ]);
+            return redirect()->route('about.index')->with('update' , 'update');
     }
 
     /**

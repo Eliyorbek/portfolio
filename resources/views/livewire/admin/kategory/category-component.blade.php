@@ -6,12 +6,12 @@
     </style>
     <div class="card card-outline card-primary">
         @include('livewire.card-header')
-        @include('livewire.admin.about.modal')
+        @include('livewire.admin.kategory.modal')
         @if($delete==1)
             @include('livewire.delete')
         @endif
         @if($update==1)
-            @include('livewire.admin.about.update')
+            @include('livewire.admin.kategory.update')
             @include('livewire.show')
         @endif
         <div class="card-body">
@@ -21,8 +21,7 @@
                     @foreach($models as $model)
                         <tr>
                             <td>{{++$count}}</td>
-                            <td>{{$model->name[session('locale')]}}</td>
-                            <td>{{$model->title}}</td>
+                            <td>{{$model->name}}</td>
                             <td class="d-flex gap-1">
                                 <button  wire:click="updateWindow({{$model->id}})" class="btn btn-warning btn-sm"><i class="bx bx-edit"></i></button>
                                 <div wire:ignore>
