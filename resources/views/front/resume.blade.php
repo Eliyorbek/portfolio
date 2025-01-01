@@ -76,6 +76,10 @@
                     <p><em><a href="https://meningbozorchim.uz">meningbozorchim.uz</a></em></p>
                 </div>
                 <div class="resume-item">
+                    <h4>Bozorchi APP</h4>
+                    <p><em><a href="https://play.google.com/store/apps/details?id=uz.bozorchi.app">https://play.google.com/store/apps/details?id=uz.bozorchi.app</a></em></p>
+                </div>
+                <div class="resume-item">
                     <h4>Stomatologiya</h4>
                     <p><em><a href="https://dental.brim.uz">dental.brim.uz</a></em></p>
                 </div>

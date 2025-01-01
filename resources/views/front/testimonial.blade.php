@@ -1,115 +1,63 @@
 <section id="testimonials" class="testimonials section light-background">
 
-    <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-    </div><!-- End Section Title -->
+   <!-- Section Title -->
+ <style>
+.pricing .pricing-item {
+    border-bottom: 1px dashed color-mix(in srgb, #4e4e4e, transparent 60%);
+    width: 100%;
+    height: 100%;
+    padding: 0 0 15px 0;
+  }
+  
+.pricing .pricing-item h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+.pricing .pricing-item h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #0078ff;
+  }
+ </style>
+ <div class="container .pricing section-title" data-aos="fade-up">
+    <h2>{{__('words.pricing')}}</h2>
+    <p>{{__('words.pricing_text')}}</p>
+  </div><!-- End Section Title -->
 
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="swiper init-swiper">
-            <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 600,
-                  "autoplay": {
-                    "delay": 5000
-                  },
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  },
-                  "breakpoints": {
-                    "320": {
-                      "slidesPerView": 1,
-                      "spaceBetween": 40
-                    },
-                    "1200": {
-                      "slidesPerView": 3,
-                      "spaceBetween": 1
-                    }
-                  }
-                }
-            </script>
-            <div class="swiper-wrapper">
+    <div class="row gy-4 gx-lg-5">
 
-                <div class="swiper-slide">
-                    <div class="testimonial-item">
-                        <p>
-                            <i class="bi bi-quote quote-icon-left"></i>
-                            <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
-                            <i class="bi bi-quote quote-icon-right"></i>
-                        </p>
-                        <img src="/front/assets/img/testimonials/testimonials-1.jpg" class="testimonial-img"
-                             alt="">
-                        <h3>Saul Goodman</h3>
-                        <h4>Ceo &amp; Founder</h4>
-                    </div>
-                </div><!-- End testimonial item -->
-
-                <div class="swiper-slide">
-                    <div class="testimonial-item">
-                        <p>
-                            <i class="bi bi-quote quote-icon-left"></i>
-                            <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
-                            <i class="bi bi-quote quote-icon-right"></i>
-                        </p>
-                        <img src="/front/assets/img/testimonials/testimonials-2.jpg" class="testimonial-img"
-                             alt="">
-                        <h3>Sara Wilsson</h3>
-                        <h4>Designer</h4>
-                    </div>
-                </div><!-- End testimonial item -->
-
-                <div class="swiper-slide">
-                    <div class="testimonial-item">
-                        <p>
-                            <i class="bi bi-quote quote-icon-left"></i>
-                            <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
-                            <i class="bi bi-quote quote-icon-right"></i>
-                        </p>
-                        <img src="/front/assets/img/testimonials/testimonials-3.jpg" class="testimonial-img"
-                             alt="">
-                        <h3>Jena Karlis</h3>
-                        <h4>Store Owner</h4>
-                    </div>
-                </div><!-- End testimonial item -->
-
-                <div class="swiper-slide">
-                    <div class="testimonial-item">
-                        <p>
-                            <i class="bi bi-quote quote-icon-left"></i>
-                            <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
-                            <i class="bi bi-quote quote-icon-right"></i>
-                        </p>
-                        <img src="/front/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img"
-                             alt="">
-                        <h3>Matt Brandon</h3>
-                        <h4>Freelancer</h4>
-                    </div>
-                </div><!-- End testimonial item -->
-
-                <div class="swiper-slide">
-                    <div class="testimonial-item">
-                        <p>
-                            <i class="bi bi-quote quote-icon-left"></i>
-                            <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
-                            <i class="bi bi-quote quote-icon-right"></i>
-                        </p>
-                        <img src="/front/assets/img/testimonials/testimonials-5.jpg" class="testimonial-img"
-                             alt="">
-                        <h3>John Larson</h3>
-                        <h4>Entrepreneur</h4>
-                    </div>
-                </div><!-- End testimonial item -->
-
-            </div>
-            <div class="swiper-pagination"></div>
+      <div class="col-lg-6 pricing">
+        <div class="pricing-item  d-flex justify-content-between">
+          <h3>{{__('service.web')}}</h3>
+          <h4>$100 - $1200</h4>
         </div>
+      </div><!-- End Pricing Item -->
+
+      <div class="col-lg-6 pricing">
+        <div class="pricing-item d-flex justify-content-between">
+          <h3>Telegram bot</h3>
+          <h4>$100 - $500</h4>
+        </div>
+      </div><!-- End Pricing Item -->
+      <div class="col-lg-6 pricing">
+        <div class="pricing-item d-flex justify-content-between">
+          <h3>CRM</h3>
+          <h4>$300 - $1500</h4>
+        </div>
+      </div><!-- End Pricing Item -->
+      <div class="col-lg-6 pricing">
+        <div class="pricing-item d-flex justify-content-between">
+          <h3>Mobile App</h3>
+          <h4>$500 - $1300</h4>
+        </div>
+      </div><!-- End Pricing Item -->
 
     </div>
+
+  </div>
 
 </section>

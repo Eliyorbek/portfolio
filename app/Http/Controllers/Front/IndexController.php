@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use App\Models\About;
+use App\Models\Category;
+use App\Models\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
@@ -20,6 +22,8 @@ class IndexController extends Controller
         $desc = $abouts->count() - $asc;
         $about1 = About::orderBy('id', 'desc')->limit($desc)->get();
         $about2 = About::limit($asc)->get();
-        return view('front.index' , compact('about1','about2'));
+        $projects = Project::all();
+        $categories = Category::all();
+        return view('front.index' , compact('about1','about2','projects', 'categories'));
     }
 }

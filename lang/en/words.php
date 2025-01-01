@@ -26,4 +26,17 @@ return [
     'skills'=>"Skills",
     'languages'=>"Languages",
     'category'=>'Categories',
-    ];
+    'projects'=>'Projects',
+    'pricing'=>'Pricing',
+    'pricing_text'=>'We offer our services at the following prices. Negotiable...',
+    'ism'=>'Name',
+    'phone'=>'Phone Number',
+    'message'=>'Message',
+    'client'=>'Happy Clients',
+    'hour'=>'Hours Of Support',
+    'hard'=>'Hard Workers',
+    'portfolio_text'=>'Our projects. Contact us to use our services.',
+    'ismKir'=>'Enter your name',
+    'phoneKir'=>'Enter your phone number',
+    'habarYoz'=>'Write your message',
+];

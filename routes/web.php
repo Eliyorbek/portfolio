@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\ContactController;
+use App\Http\Controllers\Backend\ProjectsController;
 use App\Http\Controllers\Front\IndexController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\App;
@@ -9,11 +11,11 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
-Route::get('language/{locale}', function ($locale) {
-    app()->setLocale($locale);
-    session()->put('locale', $locale);
-    return redirect()->back();
-});
+    Route::get('language/{locale}', function ($locale) {
+        app()->setLocale($locale);
+        session()->put('locale', $locale);
+        return redirect()->back();
+    });
 Route::middleware([\App\Http\Middleware\AdminMiddleware::class])->group(function () {
     Route::get('/admin', function () {
         if (Session::get('locale') ==null) {
@@ -23,7 +25,7 @@ Route::middleware([\App\Http\Middleware\AdminMiddleware::class])->group(function
         return view('backend.index');
     })->name('admin');
 
-    Route::controller(Aboudeletetroller::class)->group(function () {
+    Route::controller(AboutController::class)->group(function () {
         Route::get('/about', 'index')->name('about.index');
         Route::post('/about', 'store')->name('about.store');
         Route::delete('/about/{id}', 'destroy')->name('about.delete');
@@ -37,6 +39,17 @@ Route::middleware([\App\Http\Middleware\AdminMiddleware::class])->group(function
         Route::put('/category/{id}', 'update')->name('category.update');
     });
 
+    Route::controller(ProjectsController::class)->group(function () {
+        Route::get('/projects', 'index')->name('projects.index');
+        Route::post('/projects', 'store')->name('projects.store');
+        Route::put('/projects/{id}', 'update')->name('projects.update');
+    });
+
+    Route::controller(ContactController::class)->group(function () {
+        Route::get('/contact', 'index')->name('contact.index');
+        Route::post('/contact', 'store')->name('contact.store');
+        Route::get('/contact/{id}', 'destroy')->name('contact.delete');
+    });
 
 });
 

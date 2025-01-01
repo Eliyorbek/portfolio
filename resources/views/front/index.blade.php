@@ -18,7 +18,7 @@
             <a href="https://www.linkedin.com/in/eliyorbek-tojimatov-02162b2a5/" class="linkedin"><i class="bi bi-linkedin"></i></a>
             <a href="https://www.instagram.com/eliyorbek_tojimatov/" class="instagram"><i class="bi bi-instagram"></i></a>
             <a href="https://t.me/eliyorbek_tojimatov" class="google-plus"><i class="bi bi-telegram"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="tel:+998905577074" class="facebook"><i class="bi bi-telephone-outbound"></i></a>
         </div>
 
         <nav id="navmenu" class="navmenu">

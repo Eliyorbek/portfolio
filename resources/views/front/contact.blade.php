@@ -38,35 +38,29 @@
                     </div><!-- End Info Item -->
 
                     <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d6078.061327269311!2d71.447204!3d40.386013!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDDCsDIzJzA5LjciTiA3McKwMjYnNDkuOSJF!5e0!3m2!1sen!2s!4v1733303528116!5m2!1sen!2s" width="600" height="450"
-                            style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            style="border:0; width: 100%; height: 170px !important;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                 </div>
             </div>
 
             <div class="col-lg-7">
-                <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-                      data-aos-delay="200">
+                <form action="{{route('contact.store')}}" method="POST" class="php-email-form">
+                      @csrf
                     <div class="row gy-4">
 
                         <div class="col-md-6">
-                            <label for="name-field" class="pb-2">Your Name</label>
-                            <input type="text" name="name" id="name-field" class="form-control" required="">
+                            <label for="name-field" class="pb-2">{{__('words.ism')}}</label>
+                            <input type="text" name="name" id="name-field" placeholder="{{__('words.ismKir')}}" class="form-control" required="">
                         </div>
 
                         <div class="col-md-6">
-                            <label for="email-field" class="pb-2">Your Email</label>
-                            <input type="email" class="form-control" name="email" id="email-field" required="">
+                            <label for="email-field" class="pb-2">{{__('words.phone')}}</label>
+                            <input type="phone" class="form-control" placeholder="{{__('words.phoneKir')}}" name="phone" id="email-field" required="">
                         </div>
 
                         <div class="col-md-12">
-                            <label for="subject-field" class="pb-2">Subject</label>
-                            <input type="text" class="form-control" name="subject" id="subject-field"
-                                   required="">
-                        </div>
-
-                        <div class="col-md-12">
-                            <label for="message-field" class="pb-2">Message</label>
-                            <textarea class="form-control" name="message" rows="10" id="message-field"
+                            <label for="message-field" class="pb-2">{{__('words.message')}}</label>
+                            <textarea class="form-control" placeholder="{{__('words.habarYoz')}}" name="message" rows="10" id="message-field"
                                       required=""></textarea>
                         </div>
 

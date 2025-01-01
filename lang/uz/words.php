@@ -26,5 +26,18 @@ return [
     'skills'=>"Ko'nikmalar",
     'languages'=>"Tillar",
     'category'=>'Kategoriyalar',
+    'projects'=>'Loyihalar',
+    'pricing'=>'Narxlar',  
+    'pricing_text'=>'Biz xizmatlarimizni sizga quyidagi narxlarda taqdim etamiz.Kelishiladi...',
+    'ism'=>'Ism',
+    'phone'=>'Telefon raqam',
+    'message'=>'Habar',
+    'client'=>'Hursand haridorlar', 
+    'hour'=>'Qo\'llab quvvatlash soati',
+    'hard'=>'Ishchilar',
+    'portfolio_text'=>'Bizning qilgan loyihalarimiz .Siz ham bizni hizmatlarimizdan foydalanish uchun biz bilan bog\'laning',
+    'ismKir'=>'Ismingizni kiriting',
+    'phoneKir'=>'Telefon raqamingizni kiriting',
+    'habarYoz'=>'Habaringizni yozing',
 
 ];
